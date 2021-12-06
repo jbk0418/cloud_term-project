@@ -69,10 +69,10 @@ def stop_instance():
 
 def reboot_instance():
     id = input('Enter instance id : ')
-    print('Stopping .... ', id)
+    print('Rebooting .... ', id)
     response = ec21.reboot_instances(InstanceIds=[id])
     result = response['ResponseMetadata']
-    print(response)
+    
 
 def create_instance():
     id = input('Enter image id : ')
@@ -88,7 +88,7 @@ def terminate_instance():
 
         if instance['TerminatingInstances'][0]['CurrentState']['Name'] == 'shutting-down':
             print('Successfully terminate instance ', id)
-        print(instance)
+        
 
 def CPU_Usage():
     now = datetime.datetime.now()
