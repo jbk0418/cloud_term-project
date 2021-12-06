@@ -1,3 +1,3 @@
 # cloud_term-project
 
-aws configure --profile 'name'
+python3 project.py
